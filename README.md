@@ -1,6 +1,14 @@
 # Build tensorrtx/yolov5 and run
 
 ```
+cp {tensorrtx}/yolov5/gen_wts.py {ultralytics}/yolov5
+cd {ultralytics}/yolov5
+python gen_wts.py yolov5s.pt
+// a file 'yolov5s.wts' will be generated.
+```
+
+
+```
 cd {tensorrtx}/yolov5/
 // update CLASS_NUM in yololayer.h if your model is trained on custom dataset
 mkdir build
